@@ -25,7 +25,8 @@ const server = require('http').createServer(app);
 // and will handle the online users and emit events to the client when a user logs in or goes offline
 
 const io = require('socket.io')(server, {cors: {
-    origin: `http://localhost:3000`,
+    origin: `${process.env.CLIENT_URL || 'http://localhost:3000'}`,
+    credentials: true,
     methods: ['GET', 'POST']
 }})  
 
