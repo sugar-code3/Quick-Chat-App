@@ -5,6 +5,8 @@ const authRouter = require('./controllers/authController');
 const userRouter = require('./controllers/userController');
 const chatRouter = require('./controllers/chatController');
 const messageRouter = require('./controllers/messageController');
+const dotenv = require('dotenv');
+dotenv.config({path: './config.env'});
 
 //use auth controller routers
 app.use(cors());
