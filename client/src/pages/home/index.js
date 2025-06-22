@@ -6,7 +6,7 @@ import Sidebar from "./components/sidebar";
 import { io } from "socket.io-client";
 import { useEffect, useState } from "react";
 
-const socket = io("http://localhost:8000");
+const socket = io('https://quick-chat-app-lmbi.onrender.com');
 
 function Home() {
   const { selectedChat, user } = useSelector((state) => state.userReducer);
